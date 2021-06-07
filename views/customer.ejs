@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<style>
+      .container{
+            transition: 0.3s all;
+        }
+        .report{
+            padding:20px;
+            display: none;
+            position: absolute;
+            top:50%;
+            left:50%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transform: translate(-50%,-50%);
+            border:2px solid black;
+            background-color: aliceblue;
+            z-index:5;
+            transition: 0.3s all;
+        }
+
+        #close{
+            padding-bottom:30px;
+            display: block;
+            border:0px;
+            color:red;
+            font-size: 18;
+            background-color: transparent;
+            margin-left:auto;
+        }
+        .report h5{
+            padding-bottom:20px;
+        }
+        .report a{
+            text-decoration: none;
+            color:green;
+            padding:10px;
+            border:1px solid green;
+        }
+        .report a:hover{
+            background-color: green;
+            text-decoration: none;
+            color:white;
+        }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:20px 100px;
+        background-color: rgb(245, 196, 252);
+        box-sizing: border-box;
+        box-shadow: 3px 3px 10px gray;
+    }
+    .fa-tv{
+        font-size: 26px;
+        margin-right: 10px;
+    }
+    h3,h4,h5,form{
+        display: inline;
+    }
+    .logout h4{
+        /* padding:10px; */
+        
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px black;
+    }
+    .center-page{
+        display: flex;
+        flex-direction: column;
+    }
+    .popper{
+        cursor: pointer;
+        height:200px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        box-shadow: 0px -10px 40px inset rgb(18, 87, 190);
+    }
+    .content{
+        margin-top:50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .logout h4 a{
+        color:black;
+        text-decoration: none;
+    }
+    .logout h4 a:hover{
+        text-decoration: none;
+        
+    }
+    .center-page{
+        padding:50px;
+    }
+    .col-md-10{
+        margin:0px;
+        padding-right:130px;
+        padding-left:0px;
+        padding-top: 100px;
+        padding-bottom:50px;
+    }
+    .total-stb{
+        margin-top:20px;
+    }
+    .divider,.row{
+        max-width: 100vw;
+        transition: 0.3s all;
+    }
+    body{
+        min-height: 100vh;
+        background: url("/img/logimage.jpg")center center/cover no-repeat;
+    }
+    
+</style>
+<body>
+    <nav>
+        <div class="logo ">
+            <i class="fas fa-tv"></i>
+            <h3>PAVI CABLE VISION'S</h3>
+        </div>
+        <div class="search">
+            <h5>Search by Serial Number</h5>
+            <form action="/report/id" method="get">
+                <input type="text" id="search-bar" name="sn">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        <div class="logout">
+            <h4 class="btn btn-light"><a href="/logout"><i class="fas fa-sign-out-alt"></i>Log Out</a></h4>
+        </div>
+    </nav>
+    <div class="report">
+        <button id="close"><i class="fas fa-times"></i></button>
+        <h5 id="popme"></h5> 
+        <a href="" id="reporter">Report</a>
+    </div>
+    <div class="divider row">
+        <div class="col-md-2">
+            <div class="content">
+                <h4><a class="btn btn-dark btn-lg"href="/report/Total">CUSTOMERS</a></h4>
+                <h4><a class="btn btn-dark btn-lg" href="/customeradd">ADD CUSTOMERS</a></h4>
+            </div>
+        </div>
+        <div class="col-md-10 ">
+            <div class="center-page">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="popper btn btn-primary" id="<%=act%>" data="Active">
+                            <h3 id="<%=act%>" data="Active"><i class="fas fa-link"></i>&nbsp;&nbsp;Active Customers</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="deactive popper btn btn-primary" id="<%=deact%>" data="De-active">
+                            <h3 id="<%=deact%>" data="De-active"><i class="fas fa-unlink"></i>&nbsp;&nbsp;Deactive Customers</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="total-stb popper btn btn-primary" id="<%=total%>" data="Total" >
+                    <h3 id="<%=total%>" data="Total"><i class="fas fa-users"></i>&nbsp;&nbsp;Total Customers</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var p=document.querySelectorAll(".popper");
+    for(let i=0;i<p.length;i++){
+        p[i].addEventListener("click",(e)=>{
+            document.querySelector(".report").style.display="flex";
+            document.querySelector("#popme").innerText="Number of "+e.target.getAttribute("data")+" customers : "+e.target.id;
+            document.querySelector(".divider").style.filter="blur(8px)";
+            document.querySelector("#reporter").setAttribute("href","/report/"+e.target.getAttribute("data"));
+        })
+    }
+    document.querySelector("#close").addEventListener("click",(e)=>{
+        document.querySelector(".divider").style.filter="none";
+        document.querySelector(".report").style.display="none";
+    });
+</script>
+</html>

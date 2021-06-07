@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pavi Cable Vision</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="stylesheet" type="text/css" href="homecablecss.css">
+	<link rel="icon"  href="box logo.png" type="image/x-icon" >
+	<style>
+	.slides {display:none;}
+	</style>
+</head>
+
+<body id="grad1">
+	<img src="/img/pavilogo.jpg" style="float: left;" class="logo">
+	
+	<div class="topnav">
+		<h2 class="heading">PAVI CABLE VISION</h2>
+			<a href="/login" class="signup-btn"><h2>Log In</h2></a>
+	</div>
+	<div class="banner">
+	   <div class="app-text">
+		   <h1>Pavi Cable Vision </h1>
+		   <p> We at PAVI are determined to give you an unforgettable Digital TV <br>experience. You can now enjoy more than 500 channels across <br>the genres of best audio and video with amazing picture quality<br> and seamless connectivity.
+			    Pay less and enjoy entertainment like<br> never before!!!</p>
+		 </div>
+		<div class="app-pic">
+			<img src="/img/offer_img-1.jpg" class="slide" width="600" height="450">
+			<img src="/img/img3.jpg" class="slide" width="600" height="450">
+			<img src="/img/img2.jpg" class="slide" width="600" height="450">
+	    </div>
+		<br>
+		<div class="about" >
+			<center><h2>About</h2></center><center>At Pavi ,we are driven by <br>a solo mission - "To orchestrate a visual symphony<br> for our customers, giving 
+			them<br> a enriched digital TV experience".At<br>
+			Pavi, we integrate entertainment, technology, <br>current 
+			consumer trends and our customers’ preferences<br>
+			to elevate their TV viewing experience. We are<br>
+			consistently adopting newer technologies to<br>
+			keep pace with our customers’ active lifestyles<br>
+			and keep them connected to endless entertainment, <br>
+			outside of their living rooms.</center>
+		</div>
+	</div>
+	<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("slide");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 3000); // Change images in 3 seconds
+		}
+	</script>
+</body>
+</html>

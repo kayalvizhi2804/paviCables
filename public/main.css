@@ -1,0 +1,47 @@
+
+body {
+	background-image: url('logimage.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+a {
+	text-decoration: none;
+}
+form {
+	width: 25%;
+	margin: 70px auto;
+	/* background: white; */
+	padding: 10px;
+	border-radius: 3px;
+}
+h2.form-title {
+	text-align: center;
+}
+input {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 8px;
+}
+form .form-group {
+	margin: 10px auto;
+} 
+form button {
+	width: 50%;
+	border: none;
+	/* color: white; */
+	background:lightseagreen;
+	padding: 15px;
+	border-radius: 2px;
+} 
+.msg {
+	margin: 5px auto;
+	border-radius: 5px;
+	border: 1px solid red;
+	background: pink;
+	text-align: left;
+	color: brown;
+	padding: 10px;
+	font-family: 'Poppins', sans-serif;
+}

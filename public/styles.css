@@ -1,0 +1,222 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+.header {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 11%;
+	background-color: rgba(151, 238, 238, 0.596);
+}
+.header h2 {
+	/* font-family: cursive; */
+	color: rgb(52, 31, 66);
+	font-weight: solid;
+	font-size: 40px;
+	position: absolute;
+	left: 85px;
+	top: 5px;
+}
+.side-bar {
+	position: absolute;
+	left: 0;
+	background-color: rgba(151, 238, 238, 0.596);
+	height: 95%;
+	width: 21%;
+	top: 11%;
+	text-align: center;
+}
+.side-bar a {
+	/* position: absolute; */
+	text-decoration: none;
+	color: black;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.right-bar {
+	position: absolute;
+	right: 0;
+	top: 11%;
+	background-color: rgba(151, 238, 238, 0.596);
+	height: 95%;
+	width: 15%;
+}
+.wifi {
+	position: absolute;
+	left: 12%;
+	top: 35%;
+}
+.internet {
+	position: absolute;
+	left: 14%;
+	top: 60%;
+}
+.header img {
+	position: absolute;
+	left: 8px;
+}
+.header p {
+	position: absolute;
+	margin-left: 47.5%;
+	top: 25px;
+	/*font-family: cursive;*/
+	font-size: 20px;
+}
+#Logout {
+	position: absolute;
+	right: 10px;
+	margin-left: 90%;
+	margin-top: 25px;
+	font-size: 18px;
+	color: red;
+	/*font-family: cursive;*/
+}
+#log {
+	position: absolute;
+	right: 4%;
+	margin-left: 91%;
+	margin-top: 20px;
+}
+#Welcome {
+	position: absolute;
+	margin-left: 84.5%;
+	font-size: 15px;
+	/*font-family: cursive;*/
+}
+#usr {
+	position: absolute;
+	margin-left: 85%;
+	margin-top: 20px;
+}
+#search {
+	cursor: pointer;
+	position: absolute;
+	margin-left: 80%;
+	/* margin-top: 20px; */
+}
+#search-bar {
+	position: absolute;
+	border: 0;
+	border-radius: 4px;
+	font-weight: 600;
+	margin-left: 65%;
+	margin-top: 20px;
+	width: 200px;
+	padding: 10px 0;
+}
+.center-page {
+	position: fixed;
+	height: 95%;
+	top: 11%;
+	left: 21%;
+	right: 15%;
+	/* background-color: aliceblue; */
+	text-align: center;
+	/*font-family: cursive;*/
+	font-size: 20px;
+}
+.active {
+	position: absolute;
+	width: 40%;
+	height: 30%;
+	background-color: rgba(151, 238, 238, 0.596);
+	border-radius: 5px;
+	top: 100px;
+	left: 8%;
+}
+.deactive {
+	position: absolute;
+	width: 40%;
+	height: 30%;
+	background-color: rgba(151, 238, 238, 0.596);
+	border-radius: 5px;
+	top: 100px;
+	left: 50%;
+}
+.total-stb {
+	position: absolute;
+	width: 40%;
+	height: 30%;
+	background-color: rgba(151, 238, 238, 0.596);
+	border-radius: 5px;
+	top: 50%;
+	left: 8%;
+}
+.billing {
+	position: absolute;
+	width: 40%;
+	height: 30%;
+	background-color: rgba(151, 238, 238, 0.596);
+	border-radius: 5px;
+	top: 50%;
+	left: 50%;
+}
+.active img {
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+.deactive img {
+	position: absolute;
+	top: 43px;
+	left: 10px;
+}
+.total-stb img {
+	position: absolute;
+	top: 20px;
+	left: 10px;
+}
+.billing img {
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+.active h3 {
+	position: absolute;
+	top: 30px;
+	left: 30%;
+	right: 5%;
+	font-size: 35px;
+	/*font-family: cursive;*/
+}
+.deactive h3 {
+	position: absolute;
+	top: 30px;
+	left: 30%;
+	right: 5%;
+	font-size: 35px;
+	/*font-family: cursive;*/
+}
+.total-stb h3 {
+	position: absolute;
+	top: 30px;
+	left: 30%;
+	right: 5%;
+	font-size: 35px;
+	/*font-family: cursive;*/
+}
+.billing h3 {
+	position: absolute;
+	top: 30px;
+	left: 30%;
+	right: 5%;
+	font-size: 35px;
+	/*font-family: cursive;*/
+}
+.footer {
+	position: absolute;
+	width: 100%;
+	height: 5%;
+	bottom: 0;
+	text-align: center;
+	color: azure;
+	/*font-family: cursive;*/
+}

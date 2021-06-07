@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Pavi Cable Vision</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,200&display=swap" rel="stylesheet">
+  
+  <style>
+    *{
+      font-family: 'Poppins', sans-serif;
+      
+    }
+body {
+  background-image: url('/img/logimage.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+  
+   .container{
+   height:40vh;
+   width:50vh;
+  
+   top:5%;
+   left:10%;
+   position:absolute;
+   
+   text-align: center;
+   color:black;
+   font-family: cursive;
+   }
+
+form{
+  margin-top: 100px;
+  margin-left: 450px;
+  position: absolute;
+  
+}
+button{
+  margin-left : 50px;
+}
+span{
+  color : blue;
+  align-items: center;
+}
+
+</style>
+</head>
+ 
+<body >
+      
+        <br><br><br><center><h1>PAVI CABLE VISION'S<span></span></h1></center>
+            <div class="container"><br>
+            <form action="/login" method="POST">
+                <label for="username">Username :</label>
+          
+               <input type="text" name="username" id="username" required><br><br>
+                
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" required><br><br>
+                
+                <input type="submit" class="btn btn-info"  value="Login">
+            </form>
+        </form>
+    </div>
+</body>
+</html>

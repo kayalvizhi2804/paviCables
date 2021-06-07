@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Report</title>
+</head>
+<style>
+    body {
+  background-image: url('/img/logimage.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+    table{
+        /* width:90%; */
+        margin:auto;
+        box-sizing: border-box;
+        box-shadow: 5px 5px 20px gray;
+        margin-top:80px;
+    }
+    th,td{
+        border:1px solid black;
+        padding:15px;
+    }
+    th{
+        text-align: center;
+    }
+    thead th{
+        background-color:black;
+        color:aliceblue;
+    }
+</style>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>STB Status</th>
+                    <th>Name</th>
+                    <th>Serial Number</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Activated Date</th>
+                    <th>Server</th>
+                    <th>Stock Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%customers.forEach(item=>{%>
+                    <tr>
+                        <td style="text-align: center;font-size: 18px;"><%if(item.stbStatus=="Active"){%>
+                        <i class="fas fa-check-circle" style="color:green"></i>
+                        <%}else{%>
+                            <i class="fas fa-times-circle" style="color:red"></i>
+                            <%}%>
+                        </td>
+                        <td><%=item.name%></td>
+                        <td><%=item.sn%></td>
+                        <td style="text-overflow: clip; width:250px"><%=item.address%></td>
+                        <td><%=item.phone%></td>
+                        <td><%=item.activatedDate%></td>
+                        <td><%=item.server%></td>
+                        <td><%=item.stockLoc%></td>
+                        <td><a href="/delete/<%=item._id%>"class="btn btn-danger">Delete</a>        <a href="/edit/<%=item._id%>" class="btn btn-success">Edit</a></td>
+                    </tr>
+                <%})%>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

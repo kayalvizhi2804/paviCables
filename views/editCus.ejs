@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Add Customers</title>
+    <style>
+        .form-group{
+            width:50%;
+            margin:auto;
+            margin-top:100px;
+        }
+        .form-group .form-control{
+            margin:20px 0px;
+        }
+        body {
+  background-image: url('/img/logimage.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+    </style>
+</head>
+    <body>
+        <div className="container">
+            <form action="/update/<%=item._id%>" class="form-group" method="POST">
+                <input class="form-control" type="text" name="name" placeholder="Name" value="<%=item.name%>">
+                <select class="form-control" id="stbStatus" name="stbStatus" value="<%=item.stbStatus%>">
+                    <option value="Active">Active</option>
+                    <option value="Deactive">Deactive</option>
+                </select>
+                <input type="text" class="form-control" name="activatedDate" placeholder="Activated Date" value="<%=item.activatedDate%>">
+                <input type="text" class="form-control" name="server" placeholder="Server" value="<%=item.server%>">
+                <input type="text" class="form-control" name="sn" placeholder="Serial Number" value="<%=item.sn%>">
+                <input type="text" class="form-control" name="stockLoc" placeholder="Stock Location" value="<%=item.stockLoc%>">
+                <textarea type="text" class="form-control" name="address" placeholder="Address"><%=item.address%></textarea>
+                <input type="text" name="phone" class="form-control" placeholder="Phone" value="<%=item.phone%>">
+                <input type="submit" value="Update" class="btn btn-block btn-outline-success">
+            </form>
+        </div>    
+</body>
+</html>
