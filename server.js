@@ -2,7 +2,7 @@
 var express = require("express");
 var path = require("path");
 var app = express();
-const port = 2000;
+const port = process.env.PORT || 2000;
 var config = require("config");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
