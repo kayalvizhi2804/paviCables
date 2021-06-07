@@ -45,6 +45,6 @@ app.use(cableRoute);
 app.use(userRoute);
 
 // Listener
-app.listen(2000, process.env.IP, function () {
+app.listen(process.env.PORT || 2000 , function () {
 	console.log("Server Started at 2000");
 });
